@@ -28,9 +28,16 @@ const server = http.createServer((req, res) => {
 
    if(req.url=="/")
     res.end("Hello from the other side"); 
-   else if(req.url=="/about")
-   
+
+   else if(req.url=="/about")   
     res.end("Hello from the about side");
+
+    else if(req.url=="/contact")   
+    res.end("Hello from the contactus sides");
+
+    else if(req.url=="/userapi")   
+    res.end("Hello from the userapi sides");
+    
    else{
     res.writeHead(404, {"Content-type": "text/html"});
     res.end("<h1>404 Eroor Page, Page doesn't Exist</h1>"); 
